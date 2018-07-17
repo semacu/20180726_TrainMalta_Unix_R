@@ -1,2 +1,3 @@
-# 20180726_TrainMalta_Unix_R
-Training materials for the Unix and R introductory session in TrainMalta Summer School 2018
+## Links
+- [TrainMalta](https://www.um.edu.mt/project/trainmalta)
+  - [Summer School 2018: Epigenomics](https://www.um.edu.mt/project/trainmalta/notices/summerschool2018epigenomics) 
