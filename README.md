@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="figures/20180720_fwd_referencepoint_bs1_rpkm_5000_plotprofile_se.png" width="600">
+<img src="img/trainmaltalogo.png" width="600">
 </p>
 
 
