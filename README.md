@@ -1,7 +1,10 @@
 
-## Introduction to Unix and R
+<p align="center">
+<img src="figures/20180720_fwd_referencepoint_bs1_rpkm_5000_plotprofile_se.png" width="600">
+</p>
 
-<img align="centre" src=img/trainmaltalogo.png width="500">
+
+## Introduction to Unix and R
 
 - Date: 26th July 2018, 9am - 1pm (CET)
 - Course: [TrainMalta]((https://www.um.edu.mt/project/trainmalta)) Summer School 2018: [Epigenomics](https://www.um.edu.mt/project/trainmalta/notices/summerschool2018epigenomics)
