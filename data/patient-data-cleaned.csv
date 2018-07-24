@@ -1,0 +1,101 @@
+ID,Name,Race,Sex,Smokes,Height,Weight,Birth,State,Pet,Grade,Died,Count,Date.Entered.Study,Age,BMI,Overweight
+AC/AH/001,Michael,White,Male,Non-Smoker,182.87,76.57,06/02/72,Georgia,Dog,2,FALSE,0.01,01/12/15,44,22.9,FALSE
+AC/AH/017,Derek,White,Male,Non-Smoker,179.12,80.43,15/06/72,Missouri,Dog,2,FALSE,-1.31,01/12/15,43,25.07,TRUE
+AC/AH/020,Todd,Black,Male,Non-Smoker,169.15,75.48,09/07/72,Pennsylvania,None,2,FALSE,-0.17,01/12/15,43,26.38,TRUE
+AC/AH/022,Ronald,White,Male,Non-Smoker,175.66,94.54,17/08/72,Florida,Cat,1,FALSE,-1.1,01/12/15,43,30.64,TRUE
+AC/AH/029,Christine,White,Female,Non-Smoker,164.47,71.78,12/06/73,Iowa,NA,2,TRUE,1.42,01/12/15,42,26.54,TRUE
+AC/AH/033,Dana,NA,Female,Smoker,158.27,69.9,01/07/73,Maryland,Dog,2,FALSE,0.29,01/12/15,42,27.9,TRUE
+AC/AH/037,Erin,White,Female,Non-Smoker,161.69,68.85,26/03/72,Pennsylvania,None,1,FALSE,0.16,01/12/15,44,26.34,TRUE
+AC/AH/044,Rachel,White,Female,Non-Smoker,165.84,70.44,11/05/73,North Carolina,None,1,FALSE,-0.07,01/12/15,42,25.61,TRUE
+AC/AH/045,Ronald,White,Male,Non-Smoker,181.32,76.9,31/12/71,Louisiana,Dog,1,FALSE,-1.43,01/12/15,44,23.39,FALSE
+AC/AH/048,Bryan,Hispanic,Male,Non-Smoker,167.37,79.06,19/07/73,North Carolina,None,2,FALSE,0.54,31/12/15,42,28.22,TRUE
+AC/AH/049,Kimberly,White,Female,Non-Smoker,160.06,72.37,04/05/72,California,Horse,2,TRUE,-2.41,31/12/15,44,28.25,TRUE
+AC/AH/050,Pamela,White,Female,Non-Smoker,166.48,67.34,14/11/71,Michigan,None,1,FALSE,1.05,31/12/15,44,24.3,FALSE
+AC/AH/052,Kenneth,White,Male,Smoker,175.39,92.22,22/03/72,Indiana,Bird,3,FALSE,-0.04,31/12/15,44,29.98,TRUE
+AC/AH/053,Stacy,White,Female,Smoker,164.7,75.69,22/11/71,Virginia,Dog,1,FALSE,-0.65,31/12/15,44,27.9,TRUE
+AC/AH/057,Elizabeth,White,Female,Smoker,163.79,65.76,12/01/72,Illinois,Cat,3,FALSE,0.06,31/12/15,44,24.51,FALSE
+AC/AH/061,Marc,Black,Male,Non-Smoker,181.13,72.33,22/11/72,Wisconsin,Dog,NA,TRUE,-0.15,31/12/15,43,22.05,FALSE
+AC/AH/063,Brandon,Hispanic,Male,Non-Smoker,169.24,73.3,22/11/71,Illinois,None,3,FALSE,0.68,31/12/15,44,25.59,TRUE
+AC/AH/076,Travis,White,Male,Non-Smoker,176.22,97.67,14/04/73,Louisiana,Cat,2,FALSE,-1.97,31/12/15,43,31.45,TRUE
+AC/AH/077,Andrew,Black,Male,Non-Smoker,174.09,72.2,07/02/73,Washington,Cat,3,FALSE,-1.18,31/12/15,43,23.82,FALSE
+AC/AH/086,Jeffrey,Black,Male,Smoker,180.11,75.72,18/05/73,Georgia,Cat,3,FALSE,0.4,31/12/15,42,23.34,FALSE
+AC/AH/089,Jimmy,White,Male,Non-Smoker,179.24,75.54,17/03/72,California,None,2,TRUE,-0.47,31/12/15,44,23.51,FALSE
+AC/AH/100,Tara,White,Female,Non-Smoker,161.92,69.92,02/01/73,Georgia,Dog,1,FALSE,0.5,31/12/15,43,26.67,TRUE
+AC/AH/104,Thomas,White,Male,Smoker,169.85,90.63,18/04/72,Kentucky,None,1,TRUE,-0.2,31/12/15,44,31.42,TRUE
+AC/AH/112,Paula,Black,Female,Non-Smoker,160.57,63.54,02/07/73,California,NA,NA,TRUE,0.69,31/01/16,42,24.64,FALSE
+AC/AH/113,Sandra,White,Female,Non-Smoker,168.24,69.57,13/02/72,Massachusetts,NA,2,FALSE,0.38,31/01/16,44,24.58,FALSE
+AC/AH/114,Mark,Hispanic,Male,Non-Smoker,177.75,74.84,25/11/72,Pennsylvania,Bird,3,FALSE,0.15,31/01/16,43,23.69,FALSE
+AC/AH/115,Steven,Bi-Racial,Male,Smoker,183.21,83.36,05/10/73,California,Dog,2,FALSE,0.05,31/01/16,42,24.83,FALSE
+AC/AH/127,George,White,Male,Non-Smoker,167.75,82.06,04/11/72,Texas,Dog,1,TRUE,0.63,31/01/16,43,29.16,TRUE
+AC/AH/133,Steven,Hispanic,Male,Non-Smoker,181.15,83.93,19/10/73,Washington,Cat,3,TRUE,-0.81,02/03/16,42,25.58,TRUE
+AC/AH/150,Brandon,White,Male,Smoker,181.56,79.54,09/05/72,Kentucky,Dog,1,TRUE,0.92,02/03/16,44,24.13,FALSE
+AC/AH/154,Julie,White,Female,Non-Smoker,160.03,64.3,05/09/73,California,Dog,1,TRUE,-0.1,02/03/16,42,25.11,TRUE
+AC/AH/156,Aaron,White,Male,Non-Smoker,165.62,76.72,15/07/72,California,Dog,1,TRUE,0.61,02/03/16,43,27.97,TRUE
+AC/AH/159,Jeffery,White,Male,Non-Smoker,181.64,96.91,10/12/72,Connecticut,Cat,2,FALSE,-0.39,02/03/16,43,29.37,TRUE
+AC/AH/160,Kristen,Asian,Female,Non-Smoker,159.67,71.88,28/09/73,Florida,Cat,2,TRUE,0.74,02/03/16,42,28.19,TRUE
+AC/AH/164,Brett,Hispanic,Male,Smoker,177.03,74.04,24/02/72,Florida,None,2,FALSE,0.15,02/03/16,44,23.63,FALSE
+AC/AH/171,Teresa,White,Female,Non-Smoker,163.35,70.46,22/04/73,California,Bird,3,TRUE,1.68,31/03/16,43,26.41,TRUE
+AC/AH/176,Brent,Asian,Male,Non-Smoker,175.21,83.65,07/05/73,Virginia,Dog,3,TRUE,0.41,31/03/16,43,27.25,TRUE
+AC/AH/180,Tiffany,White,Female,Non-Smoker,160.8,64.77,24/02/73,Oregon,Cat,1,TRUE,-2.17,31/03/16,43,25.05,TRUE
+AC/AH/185,Joel,White,Male,Non-Smoker,166.46,76.83,23/08/72,Colorado,None,NA,TRUE,-1.32,31/03/16,43,27.73,TRUE
+AC/AH/186,Michelle,White,Female,Non-Smoker,157.95,67.41,12/05/72,New Jersey,Dog,3,TRUE,-1.89,31/03/16,43,27.02,TRUE
+AC/AH/192,Aaron,White,Male,Non-Smoker,180.61,83.59,30/03/72,Michigan,None,3,TRUE,-0.6,31/03/16,44,25.63,TRUE
+AC/AH/198,Brandy,White,Female,Non-Smoker,159.52,67.99,08/12/72,Missouri,Cat,2,FALSE,-0.4,31/03/16,43,26.72,TRUE
+AC/AH/207,Kristina,White,Female,Non-Smoker,163.01,65.19,23/05/73,Florida,Dog,2,FALSE,1.07,31/03/16,42,24.53,FALSE
+AC/AH/208,Catherine,Hispanic,Female,Non-Smoker,165.8,71.77,13/08/73,Louisiana,None,1,FALSE,-1.21,31/03/16,42,26.11,TRUE
+AC/AH/210,Alicia,Hispanic,Female,Smoker,170.03,66.68,03/09/72,New York,Dog,NA,FALSE,-0.66,31/03/16,43,23.06,FALSE
+AC/AH/211,Sherry,White,Female,Non-Smoker,157.16,69.64,20/07/73,California,Cat,2,TRUE,-0.7,01/05/16,42,28.2,TRUE
+AC/AH/213,Tanya,White,Female,Smoker,164.58,72.99,31/01/72,Louisiana,Dog,1,FALSE,-0.32,01/05/16,44,26.95,TRUE
+AC/AH/219,Nancy,White,Female,Non-Smoker,163.47,72.89,13/04/72,North Caroline,Bird,1,TRUE,0.33,01/05/16,44,27.28,TRUE
+AC/AH/220,Charles,White,Male,Non-Smoker,185.43,87.23,19/07/73,Florida,Cat,1,FALSE,1.29,01/05/16,42,25.37,TRUE
+AC/AH/221,Linda,White,Female,Non-Smoker,165.34,70.84,07/02/72,Michigan,Dog,NA,TRUE,1.69,01/05/16,44,25.91,TRUE
+AC/AH/225,Nicole,White,Female,Non-Smoker,163.45,67.67,27/10/72,Michigan,Cat,2,FALSE,-0.74,01/05/16,43,25.33,TRUE
+AC/AH/233,Wendy,White,Female,Non-Smoker,163.97,66.71,29/12/71,Ohio,Cat,3,TRUE,-1.07,01/05/16,44,24.81,FALSE
+AC/AH/241,April,White,Female,Non-Smoker,161.38,73.55,14/02/72,Florida,Cat,3,FALSE,-0.82,31/05/16,44,28.24,TRUE
+AC/AH/244,Barbara,White,Female,Non-Smoker,160.09,65.93,31/01/73,Maryland,None,NA,TRUE,0.5,31/05/16,43,25.72,TRUE
+AC/AH/248,Brandon,White,Male,Non-Smoker,178.64,97.05,18/01/73,Indiana,Cat,1,TRUE,-1.21,31/05/16,43,30.41,TRUE
+AC/AH/249,Holly,Hispanic,Female,Smoker,159.78,68.31,29/04/72,Alabama,Cat,2,TRUE,0.52,31/05/16,44,26.76,TRUE
+AC/SG/002,Stacy,White,Female,Smoker,161.57,67.92,09/07/73,Arizona,Dog,3,FALSE,0.33,31/05/16,42,26.02,TRUE
+AC/SG/003,Kelly,White,Female,Non-Smoker,161.83,66.03,17/07/72,Oregon,None,2,TRUE,-0.9,31/05/16,43,25.21,TRUE
+AC/SG/008,Shawn,White,Male,Smoker,169.66,77.3,01/06/73,Nevada,Dog,1,TRUE,-2.36,31/05/16,42,26.85,TRUE
+AC/SG/009,Anthony,White,Male,Non-Smoker,166.84,88.25,10/03/72,Vermont,Dog,1,FALSE,1.51,01/07/16,44,31.7,TRUE
+AC/SG/010,Sherry,Asian,Female,Non-Smoker,159.32,64.92,04/02/73,New York,Cat,2,TRUE,0.71,01/07/16,43,25.58,TRUE
+AC/SG/015,Jeffery,White,Male,Smoker,170.51,84.35,15/11/72,New Jersey,Dog,3,TRUE,0.12,01/07/16,43,29.01,TRUE
+AC/SG/016,Valerie,Black,Female,Non-Smoker,161.84,69.97,09/04/72,Arizona,Cat,3,TRUE,-0.57,01/07/16,44,26.71,TRUE
+AC/SG/046,Jimmy,Hispanic,Male,Non-Smoker,171.41,81.7,11/08/73,Mississippi,Bird,2,TRUE,0.43,01/07/16,42,27.81,TRUE
+AC/SG/055,Jeffrey,White,Male,Non-Smoker,166.75,79.06,01/03/72,Illinois,Bird,3,TRUE,-0.55,31/07/16,44,28.43,TRUE
+AC/SG/056,Tiffany,Asian,Female,Smoker,166.19,67.46,03/12/72,Indiana,NA,3,TRUE,-1.06,31/07/16,43,24.43,FALSE
+AC/SG/064,Steven,White,Male,Non-Smoker,169.16,90.08,10/10/72,Illinois,Cat,2,TRUE,-0.1,31/07/16,43,31.48,TRUE
+AC/SG/065,Brandy,White,Female,Non-Smoker,157.01,66.56,11/04/72,California,Dog,3,TRUE,0.64,31/07/16,44,27,TRUE
+AC/SG/067,Jon,White,Male,Non-Smoker,167.51,84.15,25/07/72,Pennsylvania,Bird,2,TRUE,-1.46,31/07/16,43,29.99,TRUE
+AC/SG/068,Sarah,Hispanic,Female,Non-Smoker,160.47,68.2,21/04/72,Tennessee,Cat,3,TRUE,0.83,31/07/16,44,26.48,TRUE
+AC/SG/072,Barbara,Black,Female,Smoker,162.33,66.47,21/02/72,Californa,NA,3,FALSE,1.02,31/07/16,44,25.22,TRUE
+AC/SG/074,James,Hispanic,Male,Non-Smoker,175.67,88.82,10/10/73,Georgia,None,NA,FALSE,-3.14,31/07/16,42,28.78,TRUE
+AC/SG/084,Marc,Hispanic,Male,Non-Smoker,174.25,80.93,12/03/72,Virginia,Dog,2,TRUE,1.79,31/07/16,44,26.65,TRUE
+AC/SG/095,Mary,White,Female,Non-Smoker,158.94,65.14,01/06/73,Hawaii,Dog,1,FALSE,0.47,31/07/16,42,25.79,TRUE
+AC/SG/099,Richard,Asian,Male,Non-Smoker,172.72,67.62,10/02/72,Ohio,Cat,1,FALSE,0.05,31/07/16,44,22.67,FALSE
+AC/SG/101,Erica,White,Female,Non-Smoker,159.23,69.96,04/10/73,Michigan,Dog,2,TRUE,-0.81,31/07/16,42,27.59,TRUE
+AC/SG/107,Benjamin,White,Male,Non-Smoker,176.54,90.76,03/02/73,Hawaii,None,3,FALSE,-1.48,31/08/16,43,29.12,TRUE
+AC/SG/116,Joel,Black,Male,Non-Smoker,184.34,90.41,11/06/72,Florida,None,3,TRUE,-1.41,31/08/16,43,26.61,TRUE
+AC/SG/121,Carrie,White,Female,Non-Smoker,163.94,71.47,18/03/73,Michigan,Cat,3,FALSE,-0.25,31/08/16,43,26.59,TRUE
+AC/SG/122,Alicia,Hispanic,Female,Non-Smoker,160.09,68.94,22/12/71,South Carolina,Dog,1,FALSE,-0.99,31/08/16,44,26.9,TRUE
+AC/SG/123,Paula,White,Female,Smoker,162.32,72.72,09/09/72,North Caroline,Bird,1,TRUE,-0.92,31/08/16,43,27.6,TRUE
+AC/SG/134,Stacy,White,Female,Smoker,162.59,69.76,03/06/72,Texas,Cat,2,TRUE,-0.28,31/08/16,43,26.39,TRUE
+AC/SG/139,Todd,White,Male,Non-Smoker,171.94,82.11,12/10/73,Michigan,None,1,FALSE,-1.18,31/08/16,42,27.77,TRUE
+AC/SG/142,Brenda,White,Female,Non-Smoker,158.07,69.8,21/05/72,Kansas,Dog,3,FALSE,0.54,31/08/16,43,27.94,TRUE
+AC/SG/155,Laura,White,Female,Non-Smoker,158.35,69.72,08/06/72,California,Cat,3,TRUE,1.42,31/08/16,43,27.8,TRUE
+AC/SG/165,Laura,White,Female,Non-Smoker,162.18,67.81,31/03/72,Washington,Bird,1,TRUE,1.68,31/08/16,44,25.78,TRUE
+AC/SG/167,Suzanne,White,Female,Non-Smoker,159.38,70.37,06/10/73,Washington,None,2,TRUE,0.02,01/10/16,42,27.7,TRUE
+AC/SG/172,Troy,White,Male,Non-Smoker,171.45,84.29,02/03/72,Florida,Dog,2,TRUE,-0.19,01/10/16,44,28.67,TRUE
+AC/SG/173,Barbara,White,Female,Smoker,163.17,64.47,25/06/73,Californa,None,2,FALSE,0.69,01/10/16,42,24.21,FALSE
+AC/SG/179,Russell,White,Male,Non-Smoker,183.1,82.47,30/10/72,Ohio,Dog,3,TRUE,0.77,01/10/16,43,24.6,FALSE
+AC/SG/181,Philip,Hispanic,Male,Non-Smoker,177.14,88.7,30/11/71,Indiana,Cat,3,TRUE,1.76,01/10/16,44,28.27,TRUE
+AC/SG/182,Stephen,Hispanic,Male,Smoker,171.08,72.51,31/03/73,Louisiana,None,3,TRUE,-0.22,01/10/16,43,24.77,FALSE
+AC/SG/191,Holly,Hispanic,Female,Non-Smoker,159.33,70.68,27/06/73,Texas,None,3,TRUE,-1.07,01/10/16,42,27.84,TRUE
+AC/SG/193,Douglas,White,Male,Smoker,185.43,73.63,11/06/73,Iowa,Dog,3,FALSE,-0.29,01/10/16,42,21.41,FALSE
+AC/SG/194,Christy,White,Female,Non-Smoker,162.65,73.99,10/08/72,Maryland,Cat,3,FALSE,0.87,31/10/16,43,27.97,TRUE
+AC/SG/197,Jill,White,Female,Non-Smoker,159.44,66.21,14/11/72,New York,Cat,1,TRUE,1.21,31/10/16,43,26.05,TRUE
+AC/SG/204,Rhonda,White,Female,Non-Smoker,164.11,70.66,23/06/72,California,Dog,3,FALSE,-0.17,31/10/16,43,26.24,TRUE
+AC/SG/216,Wendy,White,Female,Non-Smoker,159.13,66.96,25/06/72,Alabama,None,1,TRUE,0.95,31/10/16,43,26.44,TRUE
+AC/SG/217,Sharon,White,Female,Non-Smoker,160.58,71.49,17/11/72,Ohio,None,1,TRUE,-0.78,31/10/16,43,27.72,TRUE
+AC/SG/234,Cheryl,Hispanic,Female,Non-Smoker,164.88,68.07,16/11/71,Pennsylvania,Cat,3,TRUE,0.35,31/10/16,44,25.04,TRUE
