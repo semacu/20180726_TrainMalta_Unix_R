@@ -78,6 +78,7 @@ A path is a sequence of nested directories with a file or directory at the end, 
 
 In different contexts, the command line is often known as the terminal, shell, bash, console ...
 
+
 #### How does the command line look like?
 
 Open your command line:
@@ -93,6 +94,7 @@ Other useful basic commands are:
 - `whoami`: who am I? what's my username?
 - `hostname`: what is the name of the machine that am I am using now?
 
+
 #### How can I list other directories?
 
 - `ls`: lists directories available in the current directory
@@ -104,6 +106,7 @@ Commands can often take options, which help commands to be more specific. Option
 - `ls -ltr`: with additional info and most recent files at the end
 - `man ls`: open the manual about the command `ls` to look for more details about other options
 
+
 #### How can I move up and down in the directory structure?
 
 Use `cd` followed by the directory you want to go to, e.g. `cd Desktop` takes me to my Desktop (*Hint*: first run `ls` to find out which directories are available for you to visit).
@@ -113,6 +116,7 @@ If you want to move in the opposite direction:
 - `cd ..`: moves one directory up
 - `cd ../..`: moves two directories up (and so on)
 - `cd` or `cd ~`: takes you to your home directory
+
 
 #### How to create, copy, move or remove files and directories?
 
@@ -130,7 +134,7 @@ Copy and move:
 
 Remove:
 
-`rm` for *files* and `rm -r` for directories (**Important** :exclamation: :exclamation: :exclamation: Think twice before executing any `rm` command as the files and directories will be gone forever)
+`rm` for *files* and `rm -r` for directories (**Important**:exclamation: Think twice before executing any `rm` command or the files and directories may be gone forever)
 
 ```bash
 cd tmp/            # Go inside directory tmp/
@@ -149,17 +153,10 @@ Other relevant commands and tricks:
 
 ### Exercise 1
 
-- Go to your web browser e.g. Firefox and type: https://github.com/semacu/20180726_TrainMalta_Unix_R
-- Click on `patient-data-cleaned.csv`, then press `Download` to save the file
-- Use the command line to find the exact directory where your internet browser downloaded `patient-data-cleaned.csv` (*Hint:* check in your home directory or in directories like `Desktop/` or `Downloads/`)
-
-- Go to your home directory and create a new directory called `Unix_R`
+- Click on this [link](https://zenodo.org/record/1319994/files/patient-data-cleaned.csv?download=1) to download the example dataset that we will be using this morning. This is a small made-up dataset which is often used for training purposes and contains information about 100 lung cancer patients aged 42-44 from different states in the US.
+- Use the command line to find the exact directory where you downloaded `patient-data-cleaned.csv` (*Hint:* use `cd` to check in your home directory or in directories such as `Desktop/` or `Downloads/`)
+- Now go to your home directory and create a new directory called `Unix_R`
 - Copy the file `patient-data-cleaned.csv` from its current location to your newly created `Unix_R` directory
-
-
-
-
-
 
 
 
