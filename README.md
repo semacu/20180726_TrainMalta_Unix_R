@@ -14,13 +14,18 @@
   - Daniel D'Andrea, Section of Inflammation and Signal Transduction, Imperial College London (UK) Email: d.dandrea [at] imperial.ac.uk
   - Sergio Martínez Cuesta, Department of Chemistry and CRUK-CI, University of Cambridge (UK) Email: sermarcue [at] gmail.com
 - Today's [plan](https://www.um.edu.mt/__data/assets/pdf_file/0006/358098/TrainMalta_SummerSchool_Programme-final.pdf)
-- We will be using the [etherpad](http://pad.software-carpentry.org/TrainMaltaSummerSchool2018)
+- We will be using the [etherpad](http://pad.software-carpentry.org/TrainMaltaSummerSchool2018) to exchange questions
+- Materials for later sessions in the course: http://34.246.2.206:3000/
 
 
 
 ## Introduction to Unix
 
-(Based on materials from Luigi Grassi's Introduction to Unix and R, TrainMalta Summer School 2016 and others)
+Based on:
+
+- Grassi's Introduction to Unix and R, TrainMalta Summer School, 2016
+- Pajon's [Introduction to the Shell](https://github.com/bioinformatics-core-shared-training/crukci-cluster-transition/blob/master/session1-shell.md)
+- Software Carpentry's [The Unix Shell](http://swcarpentry.github.io/shell-novice/)
 
 
 ### Outline
@@ -31,6 +36,10 @@
 - Using Unix tools to explore files
 - Downloading files from the internet
 - Exercise 2
+- Coffee break (10:00 - 10:30am)
+- Compressing and archiving
+- Locating files
+- Text editors
 
 
 ### The structure of Unix: files and directories
@@ -236,29 +245,220 @@ zcat < ERR056477.fastq.gz | head
 ### Exercise 2
 
 - Use pipes to find out how many patients from Florida are Male and how many are Female in the `patient-data-cleaned.csv` dataset
-- Download the sequencing data from a replicate RNA-seq experiment (ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR056/ERR056478/ERR056478.fastq.gz) and concatenate `ERR056477.fastq.gz` and `ERR056478.fastq.gz` (*Hint:* use `cat`)
+- Download the sequencing data from a replicate RNA-seq experiment (ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR056/ERR056478/ERR056478.fastq.gz) and concatenate `ERR056477.fastq.gz` and `ERR056478.fastq.gz` to produce a new combined file (*Hint:* use `cat`)
 
 :tada: Well done! :thumbsup:
 
 
+### Compressing and archiving
+
+#### How much space do I use?
+
+The command line tools `du` and `df` are useful to measure disk usage:
+
+```bash
+cd ~
+du -h Unix_R            # Size of the directory
+
+cd Unix_R
+du -h *.fastq.gz        # Size of individual files
+
+df -h /                 # Space that I use in the system
+```
+
+#### How to compress and uncompress files and directories?
+
+Compressed files with extension `.gz` can be uncompressed with the tool `gzip`. Let's uncompress one of the fastq files:
+
+```bash
+cd ~/Unix_R
+gzip -d ERR056477.fastq.gz    # The option -d uncompresses files
+ls -lh
+head ERR056477.fastq
+gzip ERR056477.fastq          # Now we compress it back
+ls -lh
+```
+
+Similarly, zipped files (extension `.zip`) can be uncompressed with the tool `unzip`. The tool [tar](https://kb.iu.edu/d/acfi) is also widely-used to build data archives and backups.
 
 
-- Users and permissions
-- Standard input/output, redirections, pipes
-- Task control
-- Environment variables and bashrc
-- Text editor (nano)
-- Text editors
-- Compressing and archiving
-- Locating files
+### Locating files
+
+The tool `find` is useful to search for files of unknown location (they may not have been used for some time):
+
+```bash
+cd ~
+find . -name "*.fastq.gz"
+find . -name "patient-data*"
+find . -name "README"
+```
+
+
+### Text editors
+
+Graphical:
+
+- Recent:
+  - [Atom](https://atom.io/): free and open source; macOS, Linux and Windows; lots of free extension packages built and maintained by the community; supports most programming languages; developed by GitHub
+  - [PyCharm](https://www.jetbrains.com/pycharm/): free and open source; macOS, Linux and Windows; specifically for the Python programming language; professional edition with extra features released under a proprietary license; developed by JetBrains.
+
+- Classic:
+  - [Gedit](https://wiki.gnome.org/Apps/Gedit): free and open source; macOS, Linux and Windows; simple and easy to use
+  - [Emacs](https://www.gnu.org/software/emacs/): one of the oldest free open source projects still under development
+  - [Kate](https://kate-editor.org/): intended for software developers
+
+Text-only:
+
+- [nano](https://www.nano-editor.org/)
+- [vi](https://en.wikipedia.org/wiki/Vi)
+
+
+Any questions? :thought_balloon: :thought_balloon: :thought_balloon:
+
+
 
 
 
 ## Introduction to R and ggplot2
 
-https://github.com/semacu/20180315_IntroductionToR_Wolfson_Cambridge/blob/master/README.Rmd
+This is based on the [R crash course](https://github.com/bioinformatics-core-shared-training/r-crash-course) developed by [Mark Dunning](https://github.com/markdunning) and [Laurent Gatto](https://github.com/lgatto).
 
-https://github.com/semacu/20180531_DataVisualisationRggplot2_Wolfson_Cambridge/blob/master/README.Rmd
+
+### Outline
+
+- Motivation
+- How can I find help?
+- Getting started
+- Variables and functions
+- Exercise 4
+- Vectors
+- Import and explore data
+- Subsetting
+- Exercise 5
+- Sort tables and export results
+- Basic plotting
+- Exercise 6
+- Advanced plotting using the ggplot2 library
+- Export graphics
+
+
+### Motivation
+
+- R is one of the most widely-used programming languages for data analysis, statistics and visualisation in academia and industry.
+- It is free, open source and available in all platforms (macOS, Linux and Windows)
+- Supported by a broad community of software developers and researchers who contribute R packages and libraries to many fields of research
+- It facilitates reproducibility in research and integration of all your analyses in individual scripts
+- Easy to write documentation and code together using a free environment like [RStudio](https://www.rstudio.com/)
+
+E.g. The New Zealand [Tourism Dashboard](https://mbienz.shinyapps.io/tourism_dashboard_prod/) uses R extensively to report statistics.
+
+
+### How can I find help?
+
+- [Stack Overflow](https://stackoverflow.com/)
+- The Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/))
+- [CRAN Task Views](https://cran.r-project.org/web/views/)
+- [R-bloggers](https://www.r-bloggers.com/)
+- [Quick-R](https://www.statmethods.net/)
+- Local R groups
+- Type `?` followed my the name of the function that you'd like to use, e.g. `?mean`
+- [Bioconductor](https://www.bioconductor.org/)
+- [Biostars](https://www.biostars.org/)
+
+
+### Getting started
+
+- Open RStudio and explore the different panels
+
+<p align="center">
+<img src="img/rstudio.png" width="500">
+</p>
+
+- RStudio interface is composed of four panels, in anti-clockwise sense:
+  - Top-left: scripts panel
+  - Bottom-left: R console
+  - Bottom-right: plots, packages and help
+  - Top-right: log panel
+
+- The scripts panel is used to write commands whereas the R console below is used to interact with the programming language.
+- Click on `File` -> `New File` -> `R Script` to open up a page where to record R commands
+- Save it as e.g. `myScript.R` in your preferred scripts location
+
+
+### Variables and functions
+
+You can use R as a calculator using the symbols `+`, `-`, `*` and `/`, or more advanced features such as statistical operations, logarithms, trigonometry ...
+
+```{r eval=FALSE}
+2 + 1
+7 - 1
+3 * 2
+10 / 5
+
+mean(1:5)
+log(1)
+pi
+sin(pi/2)
+```
+
+To store your results for later, use **variables**. To create them, use the assignment operator `<-`:
+
+```{r eval=FALSE}
+x <- 25
+x
+y <- 16
+y
+```
+
+You can perform multiple operations using variables:
+
+```{r eval=FALSE}
+sqrt(x)
+x + y
+x <- 36
+x <- y
+x <- x + 8
+```
+
+**Functions** in R take one or more *arguments* as input, which are captured using parentheses. Arguments can be named explicitly, otherwise they are meant to be used in the same order as described in the function definition. E.g. `seq` is a function for generating a numeric sequence *from* and *to* particular numbers. Type `?seq` to get the help page for this function.
+
+```{r eval=FALSE}
+?seq
+seq(from = 1, to = 10, by = 2)
+seq(1, 10, 2)
+```
+
+Some functions have *default* values in some arguments:
+
+```{r eval=FALSE}
+seq(1, 10, 1)
+seq(1, 10)
+```
+
+The default value for the `by` argument in the `seq()` function is 1.
+
+An alternative method to obtain sequences of numbers spaced by one value is the `:` symbol:
+
+```{r eval=FALSE}
+z <- 1:5
+z
+```
+
+
+#### Exercise 4
+
+Work in pairs, meet the person sitting next to you and try the following together (3 min):
+
+- Create a sequence of numbers from 10 to 30 spaced by three values
+- How about decreasing sequences? Now try from 30 to 10 spaced by three values  (hint: check `?seq`)
+- Round the number `pi` down to 1 decimal place (hint: check `?round`)
+
+```{r}
+
+
+```
+
+
 
 
 
@@ -272,6 +472,7 @@ Unix:
 - Data Carpentry: [Introduction to the command line](https://datacarpentry.org/shell-genomics/)
 - CRUK-CI Bioinformatics: [Introduction to the Shell](https://github.com/bioinformatics-core-shared-training/crukci-cluster-transition/blob/master/session1-shell.md)
 - Babraham: [Introduction to Unix](https://www.bioinformatics.babraham.ac.uk/training.html#unix)
+- Linux [Cheat Sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
 
 R:
 
@@ -279,3 +480,5 @@ R:
 - Software Carpentry: [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/)
 - Data Carpentry: [Data analysis and visualization in R](https://datacarpentry.org/R-genomics/)
 - Babraham: [Introduction to R](https://www.bioinformatics.babraham.ac.uk/training.html#rintro)
+- Torfs and Brauer: [A (very) short introduction to R](https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf)
+- R and RStudio [Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
