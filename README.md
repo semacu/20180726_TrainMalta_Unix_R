@@ -206,9 +206,9 @@ A more advanced tool to search within files is `awk`, which is actually a [progr
 awk -F "," '($9=="California") {print $0}' patient-data-cleaned.csv
 ```
 
-- <options>: -F "," (`patient-data-cleaned.csv` is a comma-separated value file)
-- '<code>': '($9=="California") {print $0}', filter lines containing California in the 9th column and print the entire line
-- <files>: patient-data-cleaned.csv
+- `<options>`: `-F ","` (`patient-data-cleaned.csv` is a comma-separated value file)
+- `'<code>'`: `'($9=="California") {print $0}'`, filter lines containing California in the 9th column, then print the entire line (`$0`)
+- `<files>`: `patient-data-cleaned.csv`
 
 ```bash
 awk -F "," '($9=="Louisiana") {print $5, $9, $11, $17}' patient-data-cleaned.csv
