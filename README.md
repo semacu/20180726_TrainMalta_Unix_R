@@ -21,7 +21,7 @@
 
 ## Introduction to Unix
 
-Based on:
+Section based on:
 
 - Grassi's Introduction to Unix and R, TrainMalta Summer School, 2016
 - Pajon's [Introduction to the Shell](https://github.com/bioinformatics-core-shared-training/crukci-cluster-transition/blob/master/session1-shell.md)
@@ -100,7 +100,7 @@ Other useful basic commands are:
 
 - `ls`: lists directories available in the current directory
 
-Commands can often take options, which help commands to be more specific. Options are defined with the `-` or `--` symbols.
+Commands can often take options, which help commands to be more specific. Options are defined with the en dash `-` or double en dash `--` symbols.
 
 - `ls -l`: provides additional info on files and directories
 - `ls -la`: (options can be combined) this includes hidden files (.name)
@@ -148,6 +148,7 @@ rm -r tmp/         # Delete directory tmp/ (here you can also use command rmdir)
 ### Exercise 1
 
 - Click on this [link](https://zenodo.org/record/1320750/files/patient-data-cleaned.csv?download=1) to download the example dataset that we will be using this morning. This is a small made-up dataset which is often used for training purposes and contains information about 100 lung cancer patients aged 42-44 from different states in the US.
+- The file `patient-data-cleaned.csv` is a comma-separated values (CSV) file, which can easily be opened using software like Excel
 - Open the command line and navigate to find the exact directory where you downloaded `patient-data-cleaned.csv` (*Hint:* use `cd` to check in your home directory or in directories such as `Desktop/` or `Downloads/`)
 - Now go to your home directory and create a new directory called `Unix_R`
 - Copy the downloaded file `patient-data-cleaned.csv` from its current location to your newly created `Unix_R` directory
@@ -321,7 +322,11 @@ Any questions? :thought_balloon: :thought_balloon: :thought_balloon:
 
 ## Introduction to R and ggplot2
 
-This is based on the [R crash course](https://github.com/bioinformatics-core-shared-training/r-crash-course) developed by [Mark Dunning](https://github.com/markdunning) and [Laurent Gatto](https://github.com/lgatto).
+Section based on:
+
+- [R crash course](https://github.com/bioinformatics-core-shared-training/r-crash-course) developed by [Mark Dunning](https://github.com/markdunning) and [Laurent Gatto](https://github.com/lgatto).
+- [Introduction to R](https://github.com/semacu/20180315_IntroductionToR_Wolfson_Cambridge) developed by [semacu](https://github.com/semacu)
+- [Data visualisation with R and ggplot2](https://github.com/semacu/20180531_DataVisualisationRggplot2_Wolfson_Cambridge) developed by [semacu](https://github.com/semacu)
 
 
 ### Outline
@@ -330,14 +335,14 @@ This is based on the [R crash course](https://github.com/bioinformatics-core-sha
 - How can I find help?
 - Getting started
 - Variables and functions
-- Exercise 4
+- Exercise 3
 - Vectors
 - Import and explore data
 - Subsetting
-- Exercise 5
+- Exercise 4
 - Sort tables and export results
 - Basic plotting
-- Exercise 6
+- Exercise 5
 - Advanced plotting using the ggplot2 library
 - Export graphics
 
@@ -374,7 +379,7 @@ E.g. The New Zealand [Tourism Dashboard](https://mbienz.shinyapps.io/tourism_das
 <img src="img/rstudio.png" width="500">
 </p>
 
-- RStudio interface is composed of four panels, in anti-clockwise sense:
+- The RStudio interface is composed of four panels, in anti-clockwise sense:
   - Top-left: scripts panel
   - Bottom-left: R console
   - Bottom-right: plots, packages and help
@@ -389,7 +394,7 @@ E.g. The New Zealand [Tourism Dashboard](https://mbienz.shinyapps.io/tourism_das
 
 You can use R as a calculator using the symbols `+`, `-`, `*` and `/`, or more advanced features such as statistical operations, logarithms, trigonometry ...
 
-```{r eval=FALSE}
+```r
 2 + 1
 7 - 1
 3 * 2
@@ -403,7 +408,7 @@ sin(pi/2)
 
 To store your results for later, use **variables**. To create them, use the assignment operator `<-`:
 
-```{r eval=FALSE}
+```r
 x <- 25
 x
 y <- 16
@@ -412,7 +417,7 @@ y
 
 You can perform multiple operations using variables:
 
-```{r eval=FALSE}
+```r
 sqrt(x)
 x + y
 x <- 36
@@ -422,7 +427,7 @@ x <- x + 8
 
 **Functions** in R take one or more *arguments* as input, which are captured using parentheses. Arguments can be named explicitly, otherwise they are meant to be used in the same order as described in the function definition. E.g. `seq` is a function for generating a numeric sequence *from* and *to* particular numbers. Type `?seq` to get the help page for this function.
 
-```{r eval=FALSE}
+```r
 ?seq
 seq(from = 1, to = 10, by = 2)
 seq(1, 10, 2)
@@ -430,7 +435,7 @@ seq(1, 10, 2)
 
 Some functions have *default* values in some arguments:
 
-```{r eval=FALSE}
+```r
 seq(1, 10, 1)
 seq(1, 10)
 ```
@@ -439,32 +444,363 @@ The default value for the `by` argument in the `seq()` function is 1.
 
 An alternative method to obtain sequences of numbers spaced by one value is the `:` symbol:
 
-```{r eval=FALSE}
+```r
 z <- 1:5
 z
 ```
 
 
-#### Exercise 4
-
-Work in pairs, meet the person sitting next to you and try the following together (3 min):
+### Exercise 3
 
 - Create a sequence of numbers from 10 to 30 spaced by three values
 - How about decreasing sequences? Now try from 30 to 10 spaced by three values  (hint: check `?seq`)
 - Round the number `pi` down to 1 decimal place (hint: check `?round`)
 
-```{r}
+:tada: Congratulations! You did it! :thumbsup:
 
 
+### Vectors
+
+- The output we get using R functions such as `seq()` are called vectors, which are collections of numbers or characters
+- To create vectors use the function `c()` (a.k.a. *combine*)
+- Use square brackets `[ ]` to indicate the position within the vector (the ***index***) and extract elements
+
+```r
+x <- c(5,6,7,8,9,10)
+x
+x[3]
+x[1]
+x[3:5]
+```
+
+Arithmetic operations in vectors occur element by element:
+
+```r
+x <- c(2, 4, 5, 6, 7)
+y <- x*2
+y
+x + y
+```
+
+A vector can also contain text, however unlike values, these need to be captured using quotation marks `" "`:
+
+```r
+x <- c("a", "b", "b", "c", "c", "d")
+x
+
+x <- c(a, b, b, c, c, d) # otherwise R thinks they are objects
+```
+
+To create subsets of our vectors, we can use *comparison* operators:
+
+- `==` equal
+- `>` greater than
+- `<` less than
+- `!=` not equal
+
+```r
+x <- c("a", "b", "b", "c", "c", "d")
+x == "b" # this is known as a logical or boolean vector, composed of TRUE or FALSE values only
+x != "b"
+x[x != "b"]
+
+x <- c(2, 4, 5, 6, 7)
+x > 4
+x[x > 4]
 ```
 
 
+### Import and explore data
+
+We will be using the dataset `patient-data-cleaned.csv` presented in the Introduction to Unix session earlier.
+
+You will first need to find the **path** to the file `patient-data-cleaned.csv`. You can use the function `file.choose()` to open a dialogue box and browse through the directories to reach the file. The path will then be displayed in R:
+
+```r
+file.choose()
+```
+
+e.g. for me the path to `patient-data-cleaned.csv` is `/Users/martin03/Unix_R/patient-data-cleaned.csv`. The file `patient-data-cleaned.csv` is a comma-separated values (CSV) file and in R, you can use the `read.csv()` function to import the dataset and create a data frame object using the path obtained above:
+
+```r
+patient_data <- read.csv("/Users/martin03/Unix_R/patient-data-cleaned.csv") # copy here the path obtained when running file.choose()
+```
+
+Exploring rows and columns in the `patient_data` data frame:
+
+```r
+# Dimensions
+dim(patient_data)
+ncol(patient_data)
+nrow(patient_data)
+
+# Viewing contents
+head(patient_data)
+View(patient_data)
+
+# Names of columns
+colnames(patient_data)
+
+# Accessing data using column names
+patient_data$Smokes
+patient_data$Height
+patient_data$State
+
+# Summary of all data frame contents
+summary(patient_data)
+str(patient_data)
+```
+
+R works such that the values in each column have all to be of the same type (i.e. all numbers or all characters/text).
+
+You can apply functions to the columns of the data frame to ask various questions:
+
+```r
+# What is the maximum height?
+max(patient_data$Height)
+# What is the minimum weight?
+min(patient_data$Weight)
+# What is the mean body mass index (BMI)? Rounded to one decimal place?
+round(min(patient_data$BMI), 1)
+```
+
+
+### Subsetting
+
+Just like when subsetting vectors, a selection of a data frame can be made using square brackes `[ , ]`, however data frames are two-dimensional objects so you'll need both *row* and *column* indexes:
+
+```r
+patient_data[1 , 2]
+patient_data[2 , 1]
+patient_data[c(1,2,3) , 1]
+patient_data[c(1,2,3) , c(1,2)]
+```
+
+If you'd like to see all the rows, or all the columns, you can neglect either the row or column index respectively. But ... remember to keep the comma ;)
+
+```r
+patient_data[2, ]
+patient_data[, 2]
+patient_data[, 1:4]
+```
+
+Rather than selecting rows based on indexes, you can also use **comparison** operators to give either a `TRUE` or `FALSE` result. When applied to subsetting, only rows with a `TRUE` result get returned.
+
+```r
+# The vector of TRUE or FALSE results applied to subsetting data
+patient_data$Height > 183
+
+# Which patients are taller than 183cm?
+patient_data[patient_data$Height > 183,]
+
+# Which patients are smokers?
+patient_data[patient_data$Smokes == "Smoker",]
+
+# Which patients are taller than 183cm AND are smokers too?
+patient_data$Height > 183 & patient_data$Smokes == "Smoker"
+patient_data[patient_data$Height > 183 & patient_data$Smokes == "Smoker",]
+
+# You can also select only specific columns using the column name, e.g. give me only the ID, Name, State and Disease Grade
+patient_data[patient_data$Height > 183 & patient_data$Smokes == "Smoker", c("ID", "Name", "State", "Grade")]
+```
+
+The useful subsetting operators to bear in mind here are **and** `&`, **or** `|` and **in** `%in%`.
+
+
+### Exercise 4
+
+- Select patients that have a BMI greater than 30 or their weight is greater than 90kg. Calculate their average height.
+- Select female patients from California who are not overweighted
+
+:tada: Well done! :thumbsup:
+
+
+### Sort tables and export results
+
+The function `order()` gives sorted indices, which can then be used to sort your data set:
+
+```r
+# Sort patients by Disease Grade
+order(patient_data$Grade)
+patient_data[order(patient_data$Grade),] # from benign (1) to harmful (3)
+patient_data[order(patient_data$Grade, decreasing = TRUE),] # from harmful (3) to benign (1)
+
+# Sort patients by more than one condition: first Disease Grade, second Weight
+patient_data[order(patient_data$Grade, patient_data$Weight, decreasing = TRUE),]
+```
+
+Once data processing is completed, you can export results out of R as follows:
+
+```r
+# Which patients from California are non-smokers?
+patient_data_california <- patient_data[patient_data$State == "California" & patient_data$Smokes == "Non-Smoker",]
+
+# Export
+write.csv(patient_data_california, file = "/Users/martin03/Unix_R/patient-data-cleaned-california.csv")
+```
+
+
+### Basic plotting
+
+Simple plotting functions are available in the base R distribution (histograms, barplots, boxplots, scatterplots ...). All that is required as input are vectors of data, e.g. columns in your data frame.
+
+**Histograms** are often used to have an overview of the distribution of continuous data:
+
+```r
+hist(patient_data$BMI)
+hist(patient_data$Weight)
+```
+
+**Barplots** are useful when you have counts of categorical data:
+
+```r
+barplot(table(patient_data$Race))
+barplot(table(patient_data$Sex))
+barplot(table(patient_data$Smokes))
+barplot(table(patient_data$State), las=2, cex.names=0.7) # 'las=2' changes the x-axis labels to horizonal and 'cex.names=0.7' changes the size
+barplot(table(patient_data$Grade))
+barplot(table(patient_data$Overweight))
+```
+
+**Boxplots** are good when comparing distributions Here the `~` symbol sets up a formula, the effect of which is to put the categorical variable on the x-axis and continuous variable on the y-axis -> `boxplot(y ~ x)`
+
+```r
+boxplot(patient_data$BMI ~ patient_data$Grade)
+boxplot(patient_data$BMI ~ patient_data$Overweight)
+
+boxplot(patient_data$Weight ~ patient_data$Overweight)
+```
+
+**Scatter plots** are useful when representing two continuous variables. Here -> `plot(x, y)`:
+
+```r
+plot(patient_data$Weight, patient_data$BMI)
+```
+
+To enhance the appearance of your plots, almost infinite ways of customisation are possible, e.g.:
+
+- **Colours**: `col` argument. To get a full list of possible colours type `colours()`, or check this [online reference](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
+- **Point type**: `pch`
+- **Axis labels**: `xlab` and `ylab`
+- **Plot title**: `main`
+- ... and many others: see `?plot` and `?par` for more options
+
+```r
+# linear regression
+plot(patient_data$Weight, patient_data$BMI, col="red", pch=16, xlab="Weight (kg)", ylab="BMI", main="US patient data")
+abline(lm(patient_data$BMI ~ patient_data$Weight), col="blue")
+
+# polynomial regression
+quadratic.model <-lm(patient_data$BMI ~ patient_data$Weight + I(patient_data$Weight^2))
+plot(patient_data$Weight, patient_data$BMI, col="red", pch=16, xlab="Weight (kg)", ylab="BMI", main="US patient data")
+lines(sort(patient_data$Weight), fitted(quadratic.model)[order(patient_data$Weight)], col = "darkgreen")
+```
+
+The arguments can also be used for other plotting functions!
+
+```r
+boxplot(patient_data$BMI ~ patient_data$Overweight, col=c("red", "green"), xlab="Overweight patient?", ylab="BMI", main="US patient data")
+```
+
+To explore other types of plots using R standard functions, have a look [here](https://www.statmethods.net/graphs/index.html). There are dedicated R libraries e.g. [ggplot2](http://ggplot2.tidyverse.org/index.html) to do more sophisticated plotting.
+
+
+### Exercise 5
+
+1. Any differences of BMI between Smokers and Non-Smokers? (hint: try `boxplot`)
+2. Visualise the relationship between the Height and Weight of the patients
+3. A small trick: if you attach the data.frame `patient_data` as follows, then you will only need the column name without the '$' notation:
+
+```r
+attach(patient_data)
+plot(Weight, BMI)
+```
+
+
+### Advanced plotting using the ggplot2 library
+
+The [ggplot2 library](http://ggplot2.tidyverse.org/) offers a powerful graphics language for creating elegant and complex plots. It is particularly useful when creating publication-quality graphics.
+
+The key to understanding ggplot2 is thinking about a figure in layers (e.g. data points, axes and labels, legend). This idea may be familiar to you if you have used image editing programs like Photoshop, Illustrator or Inkscape, where you can ungroup the figure into its different components.
+
+
+#### Load ggplot2
+
+There are two ways to do this:
+
+- Click on the `Packages` tab in the bottom-right RStudio panel and search for `ggplot2`, then tick its box. If you can't find it, then click on `Install` and type `ggplot2` inside the Packages box. Leaving the rest on default, click on `Install`. Once installed, then tick the box.
+
+- Run `library(ggplot2)` in the console. If you get a message like `Error in library("ggplot2") : there is no package called ‘ggplot2’` then run `install.packages("ggplot2")` in the console. Once the installation is finished, run `library(ggplot2)` again.
+
+
+#### Example
+
+Let's begin with the scatterplot of Weight and Height.
+
+First, loading ggplot2 library:
+
+```r
+library("ggplot2")
+```
+
+The first "global" layer requires the definition of the dataset, and the x and y axes:
+
+```r
+ggplot(data = patient_data, aes(x = Weight, y = Height))
+```
+
+In the second layer, we need to tell ggplot how we want to visually represent the data (scatterplot, boxplot, barplot ...). For a scatterplot, we need **geom_point()**:
+
+```r
+ggplot(data = patient_data, aes(x = Weight, y = Height)) +
+geom_point()
+```
+
+Another aes (aesthetic) property we can modify is the point *color*, e.g. to change the color depending on the grade of the disease:
+
+```r
+ggplot(data = patient_data, aes(x = Weight, y = Height, col = as.factor(Grade))) +
+geom_point()
+```
+
+
+### Export graphics
+
+When running commands directly in the interactive console (bottom-left panel), plots can be exported using the **Plots** tab in RStudio (bottom-right panel). Click on `Export` -> `Save as PDF ...`.
+
+When plotting using R standard graphics, you can also save plots to a file calling the `pdf()` or `png()` functions before executing the code to create the plot:
+
+```r
+pdf("/Users/martin03/Unix_R/BMIvsWeight.pdf")
+plot(patient_data$Weight, patient_data$BMI, col="red", pch=16, xlab="Weight (kg)", ylab="BMI", main="US patient data")
+abline(lm(patient_data$BMI ~ patient_data$Weight), col="blue")
+dev.off()
+```
+
+The `dev.off()` line is important; without it you will not be able to view the plot you have created.
+
+If you use ggplot2, the syntax is a bit more concise, e.g.:
+
+```r
+gg<- ggplot(data = patient_data, aes(x = Weight, y = Height, col = as.factor(Grade))) +
+geom_point()
+ggsave("/Users/martin03/Unix_R/HeightvsWeight.pdf")
+```
+
+
+That's it! Enjoy R! :+1: :rocket:
+
+
+
+### Questions?
+
+Any later feedback / questions about the course, please email Sergio (sermarcue@gmail.com)
 
 
 
 
 
-## Additional materials
+## Additional materials and resources
 
 Unix:
 
@@ -482,3 +818,11 @@ R:
 - Babraham: [Introduction to R](https://www.bioinformatics.babraham.ac.uk/training.html#rintro)
 - Torfs and Brauer: [A (very) short introduction to R](https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf)
 - R and RStudio [Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
+
+
+
+
+
+## License
+
+This work is distributed under a Creative Commons [CC0 license](https://en.wikipedia.org/wiki/Creative_Commons_license#CC0). No rights reserved.
